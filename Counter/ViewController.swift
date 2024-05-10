@@ -9,21 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var counterLabel: UILabel!
-    @IBOutlet weak var plusButton: UIButton!
-    @IBOutlet weak var minusButton: UIButton!
-    @IBOutlet weak var resetButton: UIButton!
-    @IBOutlet weak var historyTextView: UITextView!
+    @IBOutlet private weak var counterLabel: UILabel!
+    @IBOutlet private weak var plusButton: UIButton!
+    @IBOutlet private weak var minusButton: UIButton!
+    @IBOutlet private weak var resetButton: UIButton!
+    @IBOutlet private weak var historyTextView: UITextView!
     
     private var counter: UInt = 0
     
-    @IBAction func plusButtonDidTap() {
+    @IBAction private func plusButtonDidTap() {
         counter += 1
         counterLabel.text = "Значение счётчика: \(counter)"
         addHistoryRecord(text: "\(currentDateTime()): значение изменено на +1\n")
     }
     
-    @IBAction func minusButtonDidTap(_ sender: Any) {
+    @IBAction private func minusButtonDidTap(_ sender: Any) {
         if counter > 0 {
             counter -= 1
             counterLabel.text = "Значение счётчика: \(counter)"
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func resetButtonDidTap(_ sender: Any) {
+    @IBAction private func resetButtonDidTap(_ sender: Any) {
         counter = 0
         counterLabel.text = "0"
         addHistoryRecord(text: "\(currentDateTime()): значение сброшено\n")
