@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -51,7 +52,8 @@
                                 <rect key="frame" x="221" y="442" width="50" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="eraser" catalog="system" title="">
-                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <backgroundConfiguration key="background"/>
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="resetButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Skt-FJ-BWR"/>
@@ -67,6 +69,7 @@
                             <constraint firstItem="1MK-fm-hv0" firstAttribute="top" secondItem="GxW-Da-BLM" secondAttribute="bottom" constant="21" id="R7S-Nm-Px3"/>
                             <constraint firstItem="GxW-Da-BLM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WMh-3q-7tR"/>
                             <constraint firstItem="GxW-Da-BLM" firstAttribute="top" secondItem="EHp-nz-1yB" secondAttribute="bottom" constant="20" id="ZZg-H6-9L7"/>
+                            <constraint firstItem="1MK-fm-hv0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cle-lu-R3P"/>
                             <constraint firstItem="EHp-nz-1yB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gha-bv-hx0"/>
                             <constraint firstItem="zc1-FO-spf" firstAttribute="leading" secondItem="1MK-fm-hv0" secondAttribute="trailing" constant="10" id="j99-eP-DEc"/>
                             <constraint firstItem="EHp-nz-1yB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="jMq-E4-1Mw"/>
@@ -74,7 +77,6 @@
                             <constraint firstItem="1MK-fm-hv0" firstAttribute="leading" secondItem="S29-x0-C3y" secondAttribute="trailing" constant="10" id="nF6-Un-rFG"/>
                             <constraint firstItem="GxW-Da-BLM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sU8-H0-NDw"/>
                             <constraint firstItem="zc1-FO-spf" firstAttribute="centerY" secondItem="S29-x0-C3y" secondAttribute="centerY" id="zRR-I5-YeL"/>
-                            <constraint firstItem="1MK-fm-hv0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zxx-Ad-rMV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -99,6 +101,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
